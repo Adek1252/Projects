@@ -11,19 +11,6 @@ namespace Sudoku
         // sprawdzamy czy dany numer moze zostac wpisany - jezeli true, to wykonujemy metode ponownie dla kolejnego row (j+1) i sprawdzamy czy wartosc jest true
         // jezeli zwrocimy wartosc false to do obecnego tab[i,j] przypisujem wartosc 0 i zwracamy false calej metody
 
-
-        public static int[,] tabBackup = new int[,] {
-                                                        { 0, 0, 0, 1, 0, 7, 0, 0, 8},
-                                                        { 0, 1, 2, 0, 9, 6, 0, 0, 7},
-                                                        { 0, 5, 7, 2, 0, 4, 0, 9, 1},
-                                                        { 1, 3, 0, 6, 0, 0, 4, 8, 0},
-                                                        { 9, 0, 6, 0, 3, 0, 0, 5, 0},
-                                                        { 7, 2, 0, 5, 0, 0, 3, 0, 6},
-                                                        { 0, 0, 1, 7, 6, 0, 0, 0, 4},
-                                                        { 0, 7, 0, 0, 0, 0, 0, 0, 5},
-                                                        { 2, 0, 0, 4, 1, 0, 0, 7, 0}
-                                                   };
-
         public static int[,] tab = new int[,]      {
                                                         { 0, 0, 0, 1, 0, 7, 0, 0, 8},
                                                         { 0, 1, 2, 0, 9, 6, 0, 0, 7},
@@ -36,40 +23,19 @@ namespace Sudoku
                                                         { 2, 0, 0, 4, 1, 0, 0, 7, 0}
                                                    };
 
-        public static void sudokuSolver(int[,] tab, int[,] tabBackup)
+        public static void sudokuSolver(int[,] tab)
         {
             Console.WriteLine();
             Console.WriteLine("The input table is: ");
-            Console.WriteLine();
             drawSudoku(tab);
-            //System.Threading.Thread.Sleep(3000);
-            //Console.WriteLine();
-            //Console.WriteLine("Goo..");
-            //System.Threading.Thread.Sleep(1500);
             findSolution(0, 0, tab);
             Console.WriteLine();
             Console.WriteLine("The solution is: ");
             drawSudoku(tab);
-
-            tabBackup[0, 0] = tab[0, 0];
-            Console.WriteLine();
-            Console.WriteLine("Another solution is: ");
-
-            findSolution(0, 0, tabBackup);
-            drawSudoku(tabBackup);
-
-
         }
 
         private static Boolean findSolution(int i, int j, int[,] tab)
         {
-            //Console.Clear();
-            //Console.WriteLine();
-            //Console.WriteLine("Calculating the solution: ");
-            //Console.WriteLine();
-            //drawSudoku(tab);
-            //System.Threading.Thread.Sleep(150);
-
             if (j == tab.GetLength(0))
             {
                 j = 0;
@@ -202,7 +168,7 @@ namespace Sudoku
 
         static void Main(string[] args)
         {
-            sudokuSolver(tab, tabBackup);
+            sudokuSolver(tab);
         }
     }
 }
