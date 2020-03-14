@@ -1,13 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\41. Project - Sudoku\\Sudoku v3",
-    "\\41. Project - Sudoku\\Sudoku v3\\Sudoku v3",
-    "\\41. Project - Sudoku\\Sudoku v3\\Sudoku v3\\bin",
-    "\\41. Project - Sudoku\\Sudoku v3\\Sudoku v3\\bin\\Debug",
-    "\\41. Project - Sudoku\\Sudoku v3\\Sudoku v3\\bin\\Debug\\netcoreapp3.1",
-    "\\42. Project - Labirynt\\Labirynt"
+    "\\FindMaze",
+    "\\FindMaze\\Labirynt"
   ],
-  "SelectedNode": "\\41. Project - Sudoku",
+  "SelectedNode": "\\FindMaze\\Labirynt\\Labirynt.sln",
   "PreviewInSolutionExplorer": false
 }
