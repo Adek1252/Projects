@@ -8,7 +8,6 @@ namespace Sudoku
         // findPath(); - main method
         // assign tabSol[0,0] = 1;
         // first check if tabSol[11,8] (last col/row) is = 1, then return 1
-        //
 
 
         public static int[,] tabLab = new int[,] {
@@ -78,7 +77,7 @@ namespace Sudoku
             Console.WriteLine();
             drawTab(tabSol);
 
-            System.Threading.Thread.Sleep(100);
+            System.Threading.Thread.Sleep(500);
 
             if (tabSol[tabSol.GetLength(0) - 1, tabSol.GetLength(1) - 1] == 1) return true;
 
