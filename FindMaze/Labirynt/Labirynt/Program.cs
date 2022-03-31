@@ -77,7 +77,7 @@ namespace Sudoku
             Console.WriteLine();
             drawTab(tabSol);
 
-            System.Threading.Thread.Sleep(500);
+            System.Threading.Thread.Sleep(250);
 
             if (tabSol[tabSol.GetLength(0) - 1, tabSol.GetLength(1) - 1] == 1) return true;
 
